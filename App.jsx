@@ -23,7 +23,6 @@ export default function App() {
         <PersistGate persistor={persistor}>
           <MenuDrawer />
           </PersistGate>
-
         </NavigationContainer>
       </ProvedorAutenticacao>
     </Provider>
