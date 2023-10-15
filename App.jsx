@@ -2,7 +2,7 @@
 import 'react-native-gesture-handler';
 
 import React , { useState, useEffect } from 'react';
-import { View, Text, Button } from 'react-native';
+import { AppRegistry } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import MenuDrawer from './navigation/MenuDrawer'
@@ -27,5 +27,6 @@ export default function App() {
       </ProvedorAutenticacao>
     </Provider>
   );
-}
+} 
 
+AppRegistry.registerComponent('busy', () => App);

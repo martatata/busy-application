@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "345295496839",
+    "project_id": "busy-app-2401f",
+    "storage_bucket": "busy-app-2401f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:345295496839:android:da58910f9bb0ef6e1a7a22",
+        "android_client_info": {
+          "package_name": "com.busyapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "345295496839-2mlp2am7devt1kalu9ifv5o49ha16dfg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC88nz-2fkZMetdsvUhtO2Qgvtn_IL9jBQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "345295496839-2mlp2am7devt1kalu9ifv5o49ha16dfg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

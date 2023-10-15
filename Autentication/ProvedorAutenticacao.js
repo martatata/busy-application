@@ -60,6 +60,7 @@ class ProvedorAutenticacao extends React.Component {
     }
 
     iniciarSessao = () => {
+        console.log("entrou em iniciarSessao")
         this.definicaoUser()
         // this.setState({ autorizado: AuthService.isUsuarioAutorizado() })
         //       this.setState({ user: AuthService.userId() }, () => {
