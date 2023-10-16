@@ -1,6 +1,7 @@
 import HomeScreen from '../src/HomeScreen';
 import DetailsScreen from '../src/DetailsScreen';
 import LoginScreen from '../src/LoginScreen';
+import CadastroScreen from '../src/CadastroScreen';
 import PaymentScreen from '../src/PaymentScreen';
 const iconHome = require('../../../assets/images/tabbar/home.png');
 const iconCalendar = require('../../../assets/images/tabbar/calendar.png');
@@ -22,6 +23,11 @@ const TabNavigationData = [
   {
     name: 'Login',
     component: LoginScreen,
+    icon: iconHome,
+  },
+  {
+    name: 'Cadastro',
+    component: CadastroScreen,
     icon: iconHome,
   },
   {

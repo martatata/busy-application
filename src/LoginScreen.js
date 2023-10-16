@@ -8,10 +8,13 @@ import messaging from '@react-native-firebase/messaging';
 
 
 export function LoginScreen(props) {
+    console.log("props do login", props)
+
     const [mensagemErro, setMensagemErro] = useState(null);
     const [carregando, setCarregando] = useState(false);
     const [cpf, setCpf] = useState('');
     const [senha, setSenha] = useState('');
+    const [secondField, setSecondField] = useState('');
 
     const navigation = useNavigation();
 
@@ -63,6 +66,7 @@ export function LoginScreen(props) {
     // }
 
     handleLogin = async () => {
+
         setCarregando(true)
         setMensagemErro(null)
 
@@ -112,6 +116,10 @@ export function LoginScreen(props) {
     handleCPFChange = (text) => {
         setMensagemErro(null)
 
+        if (text.length === 14) {
+            // Quando o usuário digitar o 11º dígito, pule para o próximo campo
+            secondFieldRef.focus();
+        }
         // Remove todos os caracteres não numéricos
         text = text.replace(/\D/g, '');
 
@@ -123,8 +131,8 @@ export function LoginScreen(props) {
             text = text.substring(0, 11);
             text = text.replace(/(\d{3})(\d{3})(\d{3})(\d{0,2})/, '$1.$2.$3-$4');
         }
-        
-       setCpf(text);
+
+        setCpf(text);
     };
     redirecionar = () => {
         setCarregando(false)
@@ -132,7 +140,7 @@ export function LoginScreen(props) {
 
     }
 
-    
+
 
     return (
 
@@ -149,11 +157,12 @@ export function LoginScreen(props) {
             />
             <Text>Senha</Text>
             <TextInput
+                ref={(ref) => (secondFieldRef = ref)}
                 style={styles.input}
                 placeholder="Digite sua senha"
                 secureTextEntry={true}
                 onChangeText={this.handleSenhaChange}
-                value ={senha}
+                value={senha}
             />
             <Text style={styles.mensagemDeErroField}>{mensagemErro}</Text>
 
