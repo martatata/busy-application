@@ -6,6 +6,7 @@ import { AppRegistry } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import MenuDrawer from './navigation/MenuDrawer'
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 // importações referentes a autenticação
 import { Provider } from 'react-redux';
@@ -17,6 +18,7 @@ const Drawer = createDrawerNavigator();
 
 export default function App() {
   return (
+    <SafeAreaProvider>
     <Provider store={store}>
       <ProvedorAutenticacao>
         <NavigationContainer>
@@ -26,6 +28,7 @@ export default function App() {
         </NavigationContainer>
       </ProvedorAutenticacao>
     </Provider>
+    </SafeAreaProvider>
   );
 } 
 

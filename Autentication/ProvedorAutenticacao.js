@@ -77,7 +77,7 @@ class ProvedorAutenticacao extends React.Component {
     }
 
     encerrarSessao = () => {
-
+        console.log("entrou em encerrarSessao")
         AsyncStorage.clear();
         this.setState({ isAuthenticated: false })
 
